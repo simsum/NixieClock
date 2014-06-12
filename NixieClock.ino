@@ -85,7 +85,7 @@ void setup()
 
 void loop()
 {
-  // Secound Point Nixie Tube binking (Metro.h! Lib)
+  // Second Point Nixie Tube binking (Metro.h! Lib)
   if (SecondPoint.check() == 1) { // check if the metro has passed its interval .
     if (SecondPointState == HIGH)  {
       SecondPointState = LOW;
@@ -101,7 +101,7 @@ void loop()
     RTC.read(tm);
     unixtime = makeTime(tm);
     // Daylight saving time activ (false = standard time, true = daylight saving time +1)
-    int DaylightSaving = SommerzeitAktiv(tmYearToCalendar(tm.Year), tm.Month, tm.Day, tm.Hour, tm.Minute);
+    int DaylightSaving = DST(tmYearToCalendar(tm.Year), tm.Month, tm.Day, tm.Hour, tm.Minute);
     // DaylightSaving adjustment, RTC should work with standard time
     if (DaylightSaving) unixtime = unixtime + 3600;
     breakTime(unixtime, tm);
