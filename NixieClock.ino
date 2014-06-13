@@ -98,7 +98,7 @@ void loop()
     RTC.read(tm);
     unixtime = makeTime(tm);
     // Daylight saving time activ (false = standard time, true = daylight saving time +1)
-    int DaylightSaving = DST(tmYearToCalendar(tm.Year), tm.Month, tm.Day, tm.Hour, tm.Minute);
+    bool DaylightSaving = DST(tmYearToCalendar(tm.Year), tm.Month, tm.Day, tm.Hour, tm.Minute);
     // DaylightSaving adjustment, RTC should work with standard time
     if (DaylightSaving) unixtime = unixtime + 3600;
     breakTime(unixtime, tm);
