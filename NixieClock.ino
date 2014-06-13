@@ -81,7 +81,8 @@ void setup()
 
 void loop()
 {
-  // Second Point Nixie Tube binking (Metro.h! Lib)
+  // Second Point Nixie Tube binking 
+  // (Metro.h! Lib)
   if (SecondPoint.check() == 1) { // check if the metro has passed its interval .
     if (SecondPointState == HIGH)  {
       SecondPointState = LOW;
