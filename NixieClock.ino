@@ -1,10 +1,6 @@
 //  Nixie Clock V2.0.1 by Sven Steinmeier - sven.steinmeier@gmail.com
 //  2014-05-08
-//  Changelog:
-//  switch Library Time.h
-//  switch Library DS1307RTC.h (old: ds1307.h)
-//  switch Library Wire.h
-//  Fix workaround for daylightsaving
+
 
 #include <NixieTube.h>
 #include <Time.h>
