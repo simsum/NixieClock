@@ -4,7 +4,6 @@
 
 #include <NixieTube.h>
 #include <Time.h>
-#include <DS1307RTC.h>  //Arduino Pro Mini I2C: A4 (SDA) und A5 (SCL)
 #include <DS3232RTC.h>  //Arduino Pro Mini I2C: A4 (SDA) und A5 (SCL)
 #include <Wire.h>
 #include <Metro.h>
