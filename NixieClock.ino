@@ -77,7 +77,7 @@ void setup()
      
   // Tube Init (Color and Digit)
   tube.setBrightness(aktHelligkeit);	 // Helligkeit der Anzeige einstellen
-  for (int i = 0; i < 4; i ++) {
+  for (int i = 0; i < NixieCount; i ++) {
     tube.setBackgroundColor(i, TubeBackColor [i]);
     tube.setColon(i, TubeColon[i]);
     tube.setNumber(i, TubeNumber[i]);
