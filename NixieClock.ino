@@ -31,6 +31,9 @@ Metro ReadRTC = Metro(5000);
 // Instanciate a metro object and set the interval to 10 milliseconds (0.01 second).
 Metro MainProg = Metro(10);
 
+// Instanciate a metro object and set the interval to 50 milliseconds (0.05 second).
+Metro CathPosi = Metro(50);
+
 tmElements_t tm;
 unsigned long unixtime; //unsigned! long to fix the year 2038 problem
 
