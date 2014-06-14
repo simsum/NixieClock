@@ -16,7 +16,7 @@ int Tag;
 int Stunde;
 int Minute;
 int Sekunde;
-int TimeZone = 1;
+int TimeZone = +1;
 
 // Secound Point Nixie Tube binking
 // Create a variable to hold theled's current state
