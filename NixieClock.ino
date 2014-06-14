@@ -116,7 +116,7 @@ void loop()
   // Auswahl der verschiedenen Anzeigenmodi
   switch (TubeModus) {
     case 0:         // Uhrzeit auf Tube ausgeben
-      TubeModusTime = 18000;                                    //Anzeigedauer vorgeben
+      TubeModusTime = 1800;                                    //Anzeigedauer vorgeben
       // Fade In Effekt
       FadeIn();
       // Farben eintragen
