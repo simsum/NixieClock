@@ -59,6 +59,7 @@ int FadeInTime         = 400;             // Fade In Effet in den ersten 250 Uml
 // Anzeige Modus der Tube
 unsigned int TubeModus          = 0;               // Auswahl der Anzeigeart
 unsigned int TubeModusHilf      = 0;               // Hilfvariable
+unsigned int xi                 = 2;               // Hilfvariable
 unsigned int TubeModusTime      = 1000;            // Umschaltzeit in Umläuften ca. 100 Umläufe je Sekunde
 unsigned int TubeModusStop      = LOW;             // Automatische Umschaltung pausieren (Nachtmodus)
 
