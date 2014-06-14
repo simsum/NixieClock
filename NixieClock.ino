@@ -78,7 +78,7 @@ void setup()
   }
   tube.display();                          // Anzeige aktualisieren
 
-  delay(250);                              // Pause
+  delay(1000);                              // Pause
   /*
           Serial.print("Ende Setup");
           Serial.println();    */
@@ -100,13 +100,7 @@ void loop()
   // Get data from RTC
   // (Metro.h! Lib)
   if (ReadRTC.check() == 1) { // check if the metro has passed its interval .
-    RTC.read(tm);
-    unixtime = makeTime(tm);
-    // Daylight saving time activ (false = standard time, true = daylight saving time +1)
-    bool DaylightSaving = DST(tmYearToCalendar(tm.Year), tm.Month, tm.Day, tm.Hour, tm.Minute);
-    // DaylightSaving adjustment, RTC should work with standard time
-    if (DaylightSaving) unixtime = unixtime + 3600;
-    breakTime(unixtime, tm);
+    readRTCout();
   }
   
   // (Metro.h! Lib)
@@ -268,6 +262,21 @@ void loop()
   }
   }
 
+}
+
+// Read RTC 
+// Calculate Daylightsaving
+bool readRTCout (int TimeZone)
+{
+    RTC.read(tm);
+    unixtime = makeTime(tm);
+    // Daylight saving time activ (false = standard time, true = daylight saving time +1)
+    bool DaylightSaving = DST(tmYearToCalendar(tm.Year), tm.Month, tm.Day, tm.Hour, tm.Minute);
+    // DaylightSaving adjustment, RTC should work with standard time
+    if (DaylightSaving) unixtime = unixtime + 3600;
+    unixtime = unixtime + (TimeZone * 3600);      //Zeitzone verrechnen
+    breakTime(unixtime, tm);
+    return HIGH;
 }
 
 // --------------------------------
