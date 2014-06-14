@@ -109,6 +109,17 @@ void loop()
     readRTCout(TimeZone);
   }
   
+  // Counter for CATHODE POISONING
+  // Switch 4  
+  // (Metro.h! Lib)
+  if (CathPosi.check() == 1) { // check if the metro has passed its interval .
+  xi ++;
+  }
+  if (xi > 9) {
+    xi = 0;
+    }
+  
+  
   // (Metro.h! Lib)
   if (MainProg.check() == 1) { // check if the metro has passed its interval .
   
@@ -210,6 +221,7 @@ void loop()
     case 3:         // Jahr auf Tube ausgeben
       TubeModusTime = 750;
       val1 = 0;                                 //Hilfvariable aus vorherigem case auf 0 setzen
+      
       // Farben eintragen
       TubeBackColor[0] = Magenta;
       TubeBackColor[1] = Magenta;
