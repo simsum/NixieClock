@@ -100,7 +100,7 @@ void loop()
   // Get data from RTC
   // (Metro.h! Lib)
   if (ReadRTC.check() == 1) { // check if the metro has passed its interval .
-    readRTCout();
+    readRTCout(TimeZone);
   }
   
   // (Metro.h! Lib)
