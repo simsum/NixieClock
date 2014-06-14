@@ -65,7 +65,11 @@ void setup()
          Serial.println("Debug ein");
 
   */
-  // Farbe und Display einrichten
+  
+  // read RTC, frist time
+     readRTCout();
+     
+  // Tube Init (Color and Digit)
   tube.setBrightness(aktHelligkeit);	 // Helligkeit der Anzeige einstellen
   for (int i = 0; i < 4; i ++) {
     tube.setBackgroundColor(i, TubeBackColor [i]);
