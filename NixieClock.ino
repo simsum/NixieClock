@@ -32,7 +32,7 @@ Metro ReadRTC = Metro(5000);
 Metro MainProg = Metro(10);
 
 // Instanciate a metro object and set the interval to 50 milliseconds (0.05 second).
-Metro CathPosi = Metro(50);
+Metro CathPosi = Metro(150);
 
 tmElements_t tm;
 unsigned long unixtime; //unsigned! long to fix the year 2038 problem
@@ -242,7 +242,7 @@ void loop()
       break;
       
     case 4:         // CATHODE POISONING
-      TubeModusTime = 100000;
+      TubeModusTime = 1000000;
       // Fade In Effekt
       FadeIn();
       
