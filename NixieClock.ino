@@ -222,7 +222,45 @@ void loop()
       // Fade Out Effekt
       FadeOut();
       break;
+      
+    case 4:         // CATHODE POISONING
+      TubeModusTime = 1500;
 
+      scrTubeColon[0]  = None;
+      scrTubeColon[1]  = None;
+      scrTubeColon[2]  = None;
+      scrTubeColon[3]  = None;
+      scrTubeColon[4]  = None;
+      scrTubeColon[5]  = None;
+      scrTubeColon[6]  = None;
+      scrTubeColon[7]  = None;
+      scrTubeColon[8]  = None;
+      scrTubeColon[9]  = None;
+
+      scrTubeNumber[0] = 0;
+      scrTubeNumber[1] = 1;
+      scrTubeNumber[2] = 2;
+      scrTubeNumber[3] = 3;
+      scrTubeNumber[4] = 4;
+      scrTubeNumber[5] = 5;
+      scrTubeNumber[6] = 6;
+      scrTubeNumber[7] = 7;
+      scrTubeNumber[8] = 8;
+      scrTubeNumber[9] = 9;
+      
+      static float val11 = 0;
+      static float val12 = 0;
+      val12 = TubeModusTime;
+      val11 += (4 / val12);
+      for (int ii = 0; ii <= 3; ii ++) {
+        int xx;
+        xx = val11 + ii;
+        TubeColon[ii]  = scrTubeColon[xx];
+        TubeNumber[ii] = scrTubeNumber[xx];
+      }
+
+      break;
+      
     default:         // wenn nix passt dann wieder die Uhrzeit anzeigen
       TubeModus = 0;
       break;
