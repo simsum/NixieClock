@@ -38,7 +38,9 @@ tmElements_t tm;
 unsigned long unixtime; //unsigned! long to fix the year 2038 problem
 
 // NixieTube einrichten
-NixieTube tube(11, 12, 13, 10, 4);       // pin_ds, pin_st. pin_sh, pin_oe(pwm pin is preferred), COUNT
+int NixieCount = 4; //Count of NixieTube
+
+NixieTube tube(11, 12, 13, 10, NixieCount);       // pin_ds, pin_st. pin_sh, pin_oe(pwm pin is preferred), COUNT
 
 // Anzeige Variablen
 Color TubeBackColor[4] = {Red, Blue, Red, Blue};
