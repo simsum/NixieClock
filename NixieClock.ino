@@ -67,7 +67,7 @@ void setup()
   */
   
   // read RTC, frist time
-     readRTCout();
+     readRTCout(TimeZone);
      
   // Tube Init (Color and Digit)
   tube.setBrightness(aktHelligkeit);	 // Helligkeit der Anzeige einstellen
