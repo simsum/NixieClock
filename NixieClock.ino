@@ -268,7 +268,7 @@ void loop()
 
   //Änderungen auf Tube anzeigen
   tube.setBrightness(aktHelligkeit);              // Helligkeit festlegen
-  for (int i = 0; i <= 3; i ++) {                 // Schleife
+  for (int i = 0; i <= 4; i ++) {                 // Schleife
     tube.setBackgroundColor(i, TubeBackColor [i]);
     tube.setColon(i, TubeColon[i]);
     tube.setNumber(i, TubeNumber[i]);
