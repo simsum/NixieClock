@@ -242,8 +242,27 @@ void loop()
       break;
       
     case 4:         // CATHODE POISONING
+      TubeModusTime = 100000;
+      // Fade In Effekt
+      FadeIn();
       
+      TubeBackColor[0] = Black;
+      TubeBackColor[1] = Black;
+      TubeBackColor[2] = Black;
+      TubeBackColor[3] = Black;
+      
+      // Doppelpunkte bestimmen
+      TubeColon[0] = None;
+      TubeColon[1] = None;
+      TubeColon[2] = None;
+      TubeColon[3] = None;
 
+      TubeNumber[0] = xi;
+      TubeNumber[1] = xi;
+      TubeNumber[2] = xi;
+      TubeNumber[3] = xi;
+      // Fade Out Effekt
+      FadeOut();
       break;
       
     default:         // wenn nix passt dann wieder die Uhrzeit anzeigen
